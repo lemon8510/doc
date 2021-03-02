@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
+  <style>{{@style}}</style>
+</head>
+<body style="background-color: #f8f8f8;">
+  <div style="max-width: 700px;margin: 20px auto; background-color: #fff;padding: 20px;">
+    {{ each tree item i}}
+    <a class="link {{item.children.length ? 'sub-title' : ''}}" href="{{item.children.length ? '#' : item.url}}">
+      <span class="blue">• {{i+1}} </span>
+      {{item.name}}
+    </a>
+    {{ each item.children item2 i2 }}
+      <a class="link {{item2.children.length ? 'sub-title' : ''}}" href="{{item2.children.length ? '#' : item2.url}}">
+        <span class="blue">• {{i+1}}.{{i2+1}} </span>
+        {{item2.name}}
+      </a>
+      {{ each item2.children item3 i3 }}
+        <a class="link {{item3.children.length ? 'sub-title' : ''}}" href="{{item3.children.length ? '#' : item3.url}}">
+          <span class="blue">• {{i+1}}.{{i2+1}}.{{i3+1}} </span>
+          {{item3.name}}
+        </a>
+        {{ each item3.children item4 i4 }}
+          <a class="link {{item4.children.length ? 'sub-title' : ''}}" href="{{item4.children.length ? '#' : item4.url}}">
+            <span class="blue">• {{i+1}}.{{i2+1}}.{{i3+1}}.{{i4+1}} </span>
+            {{item4.name}}
+          </a>
+        {{ /each }}
+      {{ /each}}
+    {{ /each }}
+  {{ /each }}
+  <div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "@nvae/doc",
+  "version": "1.0.10",
+  "description": "Markdown to HTML",
+  "keywords": [
+    "mark",
+    "markdown",
+    "html",
+    "doc",
+    "toc",
+    "document",
+    "blog"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nvae/doc.git"
+  },
+  "homepage": "https://nvae.github.io/doc/",
+  "author": "rchdg@qq.com",
+  "license": "MIT",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "commander": "^7.1.0",
+    "marked": "^2.0.1"
+  },
+  "bin": {
+    "doc": "./bin/cmd.js"
+  }
+}
