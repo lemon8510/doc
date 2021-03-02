@@ -2,7 +2,7 @@
 const program = require('commander')
 
 program
-  .version('1.0.10')
+  .version('1.0.12')
   .option('-v --version', '显示当前版本号')
   .option('-f --file <filename>', '要生成单个HTML的Markdown文件名称')
   .option('-r --dir <directory>', '要生成HTML文档的Markdown文件目录', './')
